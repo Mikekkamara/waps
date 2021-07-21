@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\CustomerController;
@@ -18,9 +18,10 @@ use App\Http\Controllers\ChartController;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return redirect()->route('login');
-});
+}); */
+Route::view('/', 'home');
 
 Auth::routes();
 

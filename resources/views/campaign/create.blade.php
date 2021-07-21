@@ -49,37 +49,48 @@
                                                 <label class="col-form-label pt-0" for="customer">Customer</label>
                                                 <select name="customer_id" id="" class="form-control">
                                                     <option value="">Select a customer for this campaign</option>
-
+                                                    
                                                     @foreach ($customers as $customer)
-
-                                                        <option value="{{ $customer->id }}">
-                                                            {{ $customer->user->first_name }}
-                                                            &nbsp;{{ $customer->user->surname }}</option>
-                                                    @endforeach
-                                                </select>
-
+                                                    
+                                                    <option value="{{ $customer->id }}">
+                                                        {{ $customer->user->first_name }}
+                                                        &nbsp;{{ $customer->user->surname }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label class="col-form-label pt-0" for="customer">Drivers</label>
-                                                <ul>
-                                                    @foreach ($drivers as $driver)
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label class="col-form-label pt-0" for="customer">Drivers</label>
+                                                    <ul>
+                                                        @foreach ($drivers as $driver)
                                                         <li>
-                                                             <input type="checkbox" name="driver_id[]"
+                                                            <input type="checkbox" name="driver_id[]"
                                                             value="{{ $driver->id }}">
-                                                        :{{ $driver->user->first_name }}
-                                                        &nbsp;{{ $driver->user->surname }}
+                                                            :{{ $driver->user->first_name }}
+                                                            &nbsp;{{ $driver->user->surname }}
                                                         </li>
-
-
-                                                    @endforeach
-                                                </ul>
-
-
-
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+                                                    <label class="col-form-label pt-0" for="startDate">Campaign Start Date</label>
+                                                    <input class="form-control" id="startDate" type="date"
+                                                        placeholder="Start Date" name="startDate">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+                                                    <label class="col-form-label pt-0" for="endDate">Campaign End Date</label>
+                                                    <input class="form-control" id="endDate" type="date"
+                                                        placeholder="End Date" name="endDate">
+                                                </div>
+                                            </div>
 
 
 
