@@ -12,6 +12,8 @@
             // $driver_image = \App\Models\DriverPhoto::where('driver_id', $driver_id)
             //     ->pluck('profile_pic_path')
             //     ->first();
+
+            dd($customers);
             // Driver Information
             $campaign_drivers_id;
             $driver_user_id = [];

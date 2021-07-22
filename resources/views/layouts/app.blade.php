@@ -67,8 +67,8 @@
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
         <!-- Page Header Start-->
         @include('layouts.navbar')
-        <!-- Page Header Ends                              -->
-        <!-- Page Body Start-->
+        <!-- Page Header Ends -->
+        <!-- Page Body Start -->
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
             @include('layouts.sidebar')
@@ -149,11 +149,6 @@
 
     <!-- login js-->
     <!-- Plugin used-->
-
-
-
-
-
 </body>
 
 </html>
