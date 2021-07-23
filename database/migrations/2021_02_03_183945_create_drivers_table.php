@@ -19,7 +19,11 @@ class CreateDriversTable extends Migration
             $table->integer('status')->default(0);
             $table->softDeletes();
             $table->timestamps();
-
+            $table->foreign('user_id')
+                    ->references('id')
+                    ->on('users')
+                    ->cascadeOnUpdate()
+                    ->cascadeOnDelete();
         });
     }
 

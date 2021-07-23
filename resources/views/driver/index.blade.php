@@ -32,7 +32,7 @@
                                                 <div class="status-online"></div>
                                             </div>
                                         </div>
-                                        <div class="media-body">
+                                        <div class="media-body p-2">
                                             <div class="right-chart-content">
                                                 <h4>{{ $onlineDriverscount }}</h4><span>Online </span>
                                             </div>
@@ -43,11 +43,11 @@
                                     <div class="media align-items-center">
                                         <div class="avatars">
                                             <div class="avatar"><img class="img-100 rounded-circle"
-                                                    src="../assets/images/user/1.jpg" alt="#">
+                                                    src="../assets/images/avtar/11.jpg" alt="#">
                                                 <div class="status-offline"></div>
                                             </div>
                                         </div>
-                                        <div class="media-body">
+                                        <div class="media-body p-3">
                                             <div class="right-chart-content">
                                                 <h4>{{ $offlineDriverscount }}</h4><span>Offline</span>
                                             </div>
@@ -58,10 +58,10 @@
                                     <div class="media align-items-center">
                                         <div class="avatars">
                                             <div class="avatar"><img class="img-100 rounded-circle"
-                                                    src="../assets/images/user/1.jpg" alt="#">
+                                                    src="../assets/images/avtar/16.jpg" alt="#">
                                             </div>
                                         </div>
-                                        <div class="media-body">
+                                        <div class="media-body  p-3">
                                             <div class="right-chart-content">
                                             </div>
                                             <h4>{{ $allDriversCount }}</h4><span>Total Drivers</span>
@@ -72,10 +72,10 @@
                                     <div class="media border-none align-items-center">
                                         <div class="avatars">
                                             <div class="avatar"><img class="img-100 rounded-circle"
-                                                    src="../assets/images/user/1.jpg" alt="#">
+                                                    src="../assets/images/avtar/11.jpg" alt="#">
                                             </div>
                                         </div>
-                                        <div class="media-body">
+                                        <div class="media-body p-1">
                                             <div class="right-chart-content">
                                                 <h4>{{ $newDriverRequestsCount }}</h4><span>New Driver Request</span>
                                             </div>
@@ -101,9 +101,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
 
-                <div class="col-xl-12 xl-50 appointment-sec box-col-6">
+                <div class="row  appointment-sec box-col-6">
                     <div class="row">
                         <div class="col-xl-12 appointment">
                             <div class="card">
@@ -114,7 +114,7 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> <br>
 
                     @include('layouts.alert')
                                 <div class="card-body pt-0">
@@ -200,6 +200,7 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($drivers as $driver)
+                                            {{-- {{ dd($driver) }} --}}
                                             <tr>
                                                 <td>
                                                     <div class="avatars">

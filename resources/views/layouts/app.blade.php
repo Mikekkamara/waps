@@ -18,11 +18,12 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css">
+    {{-- <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.css"> --}}
+    
     <!-- ico-font-->
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/icofont.css">
     <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify.css">
+    {{-- <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify.css"> --}}
     <!-- Flag icon-->
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/flag-icon.css">
     <!-- Feather icon-->
@@ -57,6 +58,7 @@
     <script src="/assets/js/map-js/mapsjs-ui.js"></script>
     <script src="/assets/js/map-js/mapsjs-mapevents.js"></script>
     <script src="/assets/js/map-js/custom.js"></script>
+    <script src="https://kit.fontawesome.com/9967e25fdf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -135,7 +137,7 @@
 
     <!-- Theme js-->
     <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/theme-customizer/customizer.js"></script>
+    {{-- <script src="/assets/js/theme-customizer/customizer.js"></script> --}}
 
     <script src="/assets/js/prism/prism.min.js"></script>
 
