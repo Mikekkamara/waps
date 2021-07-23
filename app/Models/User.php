@@ -44,11 +44,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function drivers(){
+    /* public function drivers(){
         return $this->hasMany(Driver::class);
-    }
+    } */
     public function customers(){
         return $this->hasMany(Customer::class);
+    }
+    public function driverModels(){
+        return $this->hasMany(Driver::class);
     }
 
 

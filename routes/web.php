@@ -18,10 +18,10 @@ use App\Http\Controllers\ChartController;
 |
 */
 
-/* Route::get('/', function () {
+Route::get('/', function () {
     return redirect()->route('login');
-}); */
-Route::view('/', 'home');
+});
+// Route::view('/', 'home');
 
 Auth::routes();
 

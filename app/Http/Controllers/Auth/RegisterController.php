@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -64,10 +64,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        dd('Hello');
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
     }
+    /* public function create(Request $request){
+        $profilePic = asset('assets/images/user/user.png');
+        dd($profilePic);
+        return User::create([
+            'user_type' => '3',
+            'first_name' => $request->input('firstName'),
+            'surname' => $request->input('lastName'),
+            'email' => $request->input('emailAddress'),
+            'county' => '',
+            'country' => '',
+            'uberSwitch' => '',
+            'profile_pic_path' => $profilePic
+        ]);
+    } */
 }
