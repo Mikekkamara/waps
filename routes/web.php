@@ -66,8 +66,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/campaignMapMarker/{campaign_id}', [DistanceController::class, 'campaignMapMarker'])->name('campaignMapMarker');
     Route::get('/drivercampaignMapMarker/{driver_id}/{campaign_id}', [DistanceController::class, 'drivercampaignMapMarker'])->name('drivercampaignMapMarker');
 
-
-	Route::get('/getmonths', [ChartController::class, 'getMonths'])->name('getMonths');
+	Route::get('/getmonths', [App\Http\Controllers\ChartController::class, 'getMonths'])->name('getMonths');
 	Route::get('/getDays', [ChartController::class, 'getDays'])->name('getDays');
 	Route::get('/getMonthlyCampaignDistance/{campaign_id}', [ChartController::class, 'getMonthlyCampaignDistance'])->name('getMonthlyCampaignDistance');
 	Route::get('/getDailyCampaignDistance/{campaign_id}', [ChartController::class, 'getDailyCampaignDistance'])->name('getDailyCampaignDistance');

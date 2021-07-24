@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\DistanceController;
 use App\Http\Controllers\TravelHistoryController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
