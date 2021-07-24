@@ -59,31 +59,36 @@
                                                     </select>
                                                     
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 my-3">
                                                     <label class="col-form-label pt-0" for="customer">Drivers</label>
+                                                    {{-- <select class="selectpicker fs-6 form-control" multiple data-live-search="true">
+                                                       @foreach ($drivers as $driver)
+                                                        {{ $driver }}
+                                                           <option value="{{ $driver->id }}">
+                                                            {{ $driver->user->first_name }}
+                                                            {{ $driver->user->surname }}</option>
+                                                       @endforeach
+                                                    </select> --}}
                                                     <ul>
                                                         @foreach ($drivers as $driver)
                                                         <li>
                                                             <input type="checkbox" name="driver_id[]"
                                                             value="{{ $driver->id }}">
-                                                            :{{ $driver->user->first_name }}
+                                                            {{ $driver->user->first_name }}
                                                             &nbsp;{{ $driver->user->surname }}
                                                         </li>
                                                         @endforeach
                                                     </ul>
                                                 </div>
                                             </div>
+                                            
+                                            
                                             <div class="row">
-
                                                 <div class="col-md-6">
                                                     <label class="col-form-label pt-0" for="startDate">Campaign Start Date</label>
                                                     <input class="form-control" id="startDate" type="date"
                                                         placeholder="Start Date" name="startDate">
                                                 </div>
-                                            </div>
-                                            <div class="row">
 
                                                 <div class="col-md-6">
                                                     <label class="col-form-label pt-0" for="endDate">Campaign End Date</label>
@@ -112,4 +117,8 @@
         </div>
         <!-- Container-fluid Ends-->
     </div>
+    <script>
+        $('select').selectpicker();
+    </script>
+    
 @endsection

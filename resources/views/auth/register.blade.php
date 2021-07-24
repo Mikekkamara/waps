@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>waps | Register</title>
 
-  {{-- <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css"> --}}
+  <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   <link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
@@ -22,26 +22,27 @@
         <div class="login-main">
             <form method="POST" action="{{ route('register') }}">
             @csrf
-                <h4 >Create your account</h4>
-                <p>Enter your personal details to create account</p>
+                <p class="display-6">waps</p>
+                {{-- <h6 >Create your account</h6> --}}
+                <p class="lead text-capitalize">create your account</p>
                   
                 <div class="form-group">
                   <label for="name" class="col-form-label pt-0">Your Name</label>
                   <div class="row g-2">
-                    <div class="col-6">
-                      <input type="text" name="first_name" 
-                        class="form-control @error('first_name')
+                    
+                      <input type="text" name="name" 
+                        class="form-control @error('name')
                           is-invalid
                         @enderror" 
                         placeholder="Name"
-                        value="{{ old('first_name') }}">
-                        @error('first_name')
+                        value="{{ old('name') }}">
+                        @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                    </div>
-                    <div class="col-6">
+                    
+                    {{-- <div class="col-6">
                       <input type="text" name="surname" 
                         class="form-control @error('surname')
                         is-invalid
@@ -53,7 +54,7 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                    </div>
+                    </div> --}}
                   </div>
 
                 </div>
