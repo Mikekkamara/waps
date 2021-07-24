@@ -14,7 +14,7 @@ use App\Http\Resources\UserLoginResoure;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
 use Illuminate\Support\Facades\File;
-use Hash;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -31,6 +31,7 @@ class UserAuthController extends Controller
     {
 
         // check if email already registered
+        dd($request);
         $user = User::where('phone', $request->phone)->first();
         if (!is_null($user)) {
             return response([

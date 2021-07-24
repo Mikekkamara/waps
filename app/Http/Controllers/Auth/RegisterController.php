@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRegisterRequest;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -62,27 +63,39 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    /* protected function create(array $data)
     {
-        dd('Hello');
+        dd($data);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-    }
-    /* public function create(Request $request){
+    } */
+    protected function create(array $data){
         $profilePic = asset('assets/images/user/user.png');
-        dd($profilePic);
+        // dd($data);
+        $name = $data['name'];
+        $fullName = explode(" ", $name);
+        if(count($fullName ) > 1 ){
+            $lastname = array_pop($fullName);
+            $firstName = implode(" ", $fullName);
+        } else{
+            $firstName = $name;
+            $lastname = " ";
+        }
+        // dd($firstName. '+' . $lastname);
         return User::create([
             'user_type' => '3',
-            'first_name' => $request->input('firstName'),
-            'surname' => $request->input('lastName'),
-            'email' => $request->input('emailAddress'),
+            'first_name' => $firstName,
+            'surname' => $lastname,
+            'email' => $data['email'],
+            'phone' => $data['phone'],
             'county' => '',
             'country' => '',
             'uberSwitch' => '',
-            'profile_pic_path' => $profilePic
+            'profile_pic_path' => $profilePic,
+            'password' => Hash::make($data['password'])
         ]);
-    } */
+    }
 }
