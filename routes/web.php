@@ -36,6 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/campaign/edit/{id}', [CampaignController::class, 'edit'])->name('campaign.edit');
     Route::get('/campaign/show/{id}', [CampaignController::class, 'show'])->name('campaign.show');
     Route::delete('/campaign/delete/{id}', [CampaignController::class, 'delete'])->name('campaign.delete');
+    Route::post('/campaign/show/{id}', [CampaignController::class, 'uploadPhotos'])->name('campaign.upload');
 
     //...................................Drivers......................................//
     Route::get('/driver/index', [DriverController::class, 'index'])->name('driver.index');

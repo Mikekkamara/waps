@@ -9,7 +9,7 @@ use App\Models\Customer;
 use App\Models\Driver;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 
 class CampaignController extends Controller
 {
@@ -76,6 +76,7 @@ class CampaignController extends Controller
     }
     public function store(Request $request)
     {
+        
         $startDate = $request->input('startDate');
         $endDate = $request->input('endDate');
         $request->validateWithBag('Date',[
@@ -83,14 +84,14 @@ class CampaignController extends Controller
             'endDate' => 'required|date'
         ]);
         $driver_ids = $request->driver_id;
-
+        
         $campaign = new Campaign();
         $campaign->customer_id = $request->customer_id;
         $campaign->name = $request->name;
         $campaign->goal = $request->goal;
         $campaign->status = 1;
-        $campaign->startDate = $request->input('startDate');
-        $campaign->endDate = $request->input('endDate');
+        $campaign->startDate = $startDate;
+        $campaign->endDate = $endDate;
         if ($campaign->save()) {
             foreach ($driver_ids as $driver_id) {
 
@@ -100,6 +101,10 @@ class CampaignController extends Controller
                 $campaign_drivers->save();
             }
         }
+        // create a folder for campaign photos when a campaign is created
+        $campaignPhotoDirectory = $campaign->id;
+        $path = Storage::makeDirectory($campaignPhotoDirectory);
+        // dd($path);
         if ($campaign_drivers->save()) {
             return redirect()->route('campaign.index')->with(['success' => 'Campaign Created Succesfully']);
         } else {
@@ -237,5 +242,10 @@ class CampaignController extends Controller
 
 
         }
+    }
+    public function uploadPhotos(Request $request, $campaign_id){
+
+        $folder = Storage::allFiles($campaign_id);
+        dd($folder);
     }
 }

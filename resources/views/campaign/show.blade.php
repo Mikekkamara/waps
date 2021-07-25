@@ -182,13 +182,15 @@
                         </div>
                         <br>
                         <div class="row">
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile" aria-describedby="inputGroupFileAddon" aria-label="Upload">
-                                <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon">Upload</button>
-                            </div>
+                            <form action="{{ url('/campaign/show').'/'.$campaign->id }}" enctype="multipart/form-data" method="POST">
+                            @csrf
+                                <div class="input-group">
+                                    <input type="file" class="form-control form-control-sm" id="inputGroupFile" aria-describedby="inputGroupFileAddon" aria-label="Upload">
+                                    <button class="btn btn-outline-primary btn-sm" type="submit" id="inputGroupFileAddon">Upload</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-
                 </div>
             </div>
 
