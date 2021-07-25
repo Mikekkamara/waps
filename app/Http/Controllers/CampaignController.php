@@ -244,8 +244,15 @@ class CampaignController extends Controller
         }
     }
     public function uploadPhotos(Request $request, $campaign_id){
-
-        $folder = Storage::allFiles($campaign_id);
-        dd($folder);
+        $images = $request->file('uploadPictures');
+        if($images == null){
+            return redirect()->route('campaign.show', ['id' => $campaign_id])->with(['error' => 'Please Select An Image To upload']);
+        } else{
+            $images->store($campaign_id);
+            return redirect()->route('campaign.show', ['id' => $campaign_id])->with(['success' => 'Uploaded Succesfully', 'id' => $campaign_id]);
+        }
+        // dd($store);
+        // $folder = Storage::allFiles($campaign_id);
+        // dd($folder);
     }
 }

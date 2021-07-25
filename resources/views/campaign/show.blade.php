@@ -170,6 +170,7 @@
             </div>
         </div>
         <div class="col-xl-6 box-col-6 col-lg-12 col-md-6">
+            @include('layouts.alert')
             <div class="card o-hidden">
                 <div class="card-body">
                     <div class="media-body">
@@ -185,7 +186,7 @@
                             <form action="{{ url('/campaign/show').'/'.$campaign->id }}" enctype="multipart/form-data" method="POST">
                             @csrf
                                 <div class="input-group">
-                                    <input type="file" class="form-control form-control-sm" id="inputGroupFile" aria-describedby="inputGroupFileAddon" aria-label="Upload">
+                                    <input type="file" name="uploadPictures" class="form-control form-control-sm" id="inputGroupFile" aria-describedby="inputGroupFileAddon" aria-label="Upload">
                                     <button class="btn btn-outline-primary btn-sm" type="submit" id="inputGroupFileAddon">Upload</button>
                                 </div>
                             </form>
