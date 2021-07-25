@@ -56,16 +56,25 @@
                 <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i
                             data-feather="maximize"></i></a></li>
                 <li class="profile-nav onhover-dropdown p-0 me-0">
-                    <div class="media profile-media"><img class="b-r-10" src="/assets/images/dashboard/profile.jpg"
+                    <div class="media profile-media ">
+                        <img class="b-r-10" 
+                        src="{{ asset('assets/images/user/user.png') }}"
                             alt="">
-                        <div class="media-body"><span>
-                                @if (Auth::check())
-                                    {{ Auth::user()->first_name }}&nbsp;{{ Auth::user()->surname }}
-                                @else
-
-                                @endif
+                        <div class="media-body  my-auto">
+                            <span>
+                                {{ Auth::user()->first_name }}
                             </span>
-                            <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
+                            @if ( Auth::user()->user_type == 1 )
+                                <p class="font-roboto">Admin<i class="middle fa fa-angle-down mx-2"></i></p>
+                            @endif
+
+                            @if( Auth::user()->user_type == 2 )
+                                <p class="font-roboto">Driver<i class="middle fa fa-angle-down mx-2"></i></p>
+                            @endif
+
+                            @if( Auth::user()->user_type == 3 )
+                                <p class="font-roboto">Customer<i class="middle fa fa-angle-down mx-2"></i></p>
+                            @endif
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
