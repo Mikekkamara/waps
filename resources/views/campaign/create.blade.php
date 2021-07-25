@@ -63,10 +63,12 @@
                                                     <label class="col-form-label pt-0" for="customer">Drivers</label>
                                                     {{-- <select class="selectpicker fs-6 form-control" multiple data-live-search="true">
                                                        @foreach ($drivers as $driver)
-                                                        {{ $driver }}
+                                                        
                                                            <option value="{{ $driver->id }}">
                                                             {{ $driver->user->first_name }}
-                                                            {{ $driver->user->surname }}</option>
+                                                            {{ $driver->user->surname }}
+                                                            </option>
+                                                            
                                                        @endforeach
                                                     </select> --}}
                                                     <ul>

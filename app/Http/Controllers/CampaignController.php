@@ -76,6 +76,12 @@ class CampaignController extends Controller
     }
     public function store(Request $request)
     {
+        $startDate = $request->input('startDate');
+        $endDate = $request->input('endDate');
+        $request->validateWithBag('Date',[
+            'startDate' => 'date|required',
+            'endDate' => 'required|date'
+        ]);
         $driver_ids = $request->driver_id;
 
         $campaign = new Campaign();
@@ -83,6 +89,8 @@ class CampaignController extends Controller
         $campaign->name = $request->name;
         $campaign->goal = $request->goal;
         $campaign->status = 1;
+        $campaign->startDate = $request->input('startDate');
+        $campaign->endDate = $request->input('endDate');
         if ($campaign->save()) {
             foreach ($driver_ids as $driver_id) {
 
