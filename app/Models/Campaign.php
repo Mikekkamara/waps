@@ -16,6 +16,9 @@ class Campaign extends Model
         return $this->hasMany(CampaignVehicle::class);
     }
 
+    public function campaignPhoto(){
+        return $this->hasMany(campaignPhoto::class);
+    }
 
     public function customer()
     {

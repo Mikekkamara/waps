@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\campaignPhoto;
 use App\Models\Campaign;
 use App\Models\CampaignDriver;
 use App\Models\CampaignVehicle;
@@ -10,6 +11,7 @@ use App\Models\Driver;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class CampaignController extends Controller
 {
@@ -103,7 +105,7 @@ class CampaignController extends Controller
         }
         // create a folder for campaign photos when a campaign is created
         $campaignPhotoDirectory = $campaign->id;
-        $path = Storage::makeDirectory($campaignPhotoDirectory);
+        $path = Storage::makeDirectory('./public/'.$campaignPhotoDirectory);
         // dd($path);
         if ($campaign_drivers->save()) {
             return redirect()->route('campaign.index')->with(['success' => 'Campaign Created Succesfully']);
@@ -112,9 +114,18 @@ class CampaignController extends Controller
             return redirect()->route('campaign.index')->with(['error' => 'Campaign not Created']);
         }
     }
-    public function show($campaign_id)
+    public function show(Request $request,$campaign_id)
     {
+        /* get the file names for photos of the specific campaign
+            that had been stored earlier in the campaign photos table,
+            paginate because of space
 
+            $campaignPhotos = File::allFiles('../storage/app/public/' . $campaign_id);
+
+        */
+        $photos = campaignPhoto::where('campaign_id', $campaign_id)->paginate(3);
+        // dd($photos);
+        
         $distanceCovered = new DistanceController();
         $distanceCovered = $distanceCovered->getCampaignDistanceCovered($campaign_id);
         // dd($distanceCovered);
@@ -124,7 +135,7 @@ class CampaignController extends Controller
         $campaign_drivers_id = CampaignDriver::where('campaign_id', $campaign_id)->pluck('driver_id');
         // dd($campaign_drivers_id);
 
-        return view('campaign.show', compact('campaigns', 'campaign_drivers_id', 'distanceCovered'));
+        return view('campaign.show', compact('campaigns', 'campaign_drivers_id', 'distanceCovered', 'photos'));
     }
     public function update(Request $request, $campaign_id)
     {
@@ -248,7 +259,13 @@ class CampaignController extends Controller
         if($images == null){
             return redirect()->route('campaign.show', ['id' => $campaign_id])->with(['error' => 'Please Select An Image To upload']);
         } else{
-            $images->store($campaign_id);
+            $images->store('./public/'.$campaign_id);
+            $imageName = $images->hashName();
+            // dd($imageName);
+            campaignPhoto::create([
+                'campaign_id' => $campaign_id,
+                'image_name' => $imageName
+            ]);
             return redirect()->route('campaign.show', ['id' => $campaign_id])->with(['success' => 'Uploaded Succesfully', 'id' => $campaign_id]);
         }
         // dd($store);
