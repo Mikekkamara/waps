@@ -169,6 +169,7 @@
                 </div>
             </div>
         </div>
+        {{-- <img src="{{ url('../storage/e0015c0f-b86b-49aa-bfb8-83abc0afd6e0/user.png') }}" alt=""> --}}
         <div class="col-xl-6 box-col-6 col-lg-12 col-md-6">
             @include('layouts.alert')
             <div class="card o-hidden">
@@ -179,7 +180,29 @@
                         </div>
                         <br>
                         <div class="row">
-                            <p class="text-center lead">No photos yet</p>
+                            @if ($photos == null)
+                                <p class="text-center lead">No photos yet</p>
+                            @else
+                                @foreach ($photos as $photo)
+                                    <div class="col-md-4">
+                                        <img src="{{ url('../storage/'). '/'.$campaign->id. '/' . $photo->image_name }}" 
+                                            alt=""
+                                            class="d-block w-100">
+                                    </div>
+                                @endforeach
+                                <br>
+                                <div class="row mt-4">
+
+                                    {{ $photos->links() }}
+                                </div>
+                            @endif
+
+
+                            {{-- @foreach ($campaignPhotos as $photo )
+                                <img src="{{ url('../storage/'). '/'.$campaign->id. '/' . $photo->getRelativePathname() }}" alt="">
+                                {{ $photoName =  }}
+                            @endforeach --}}
+                            
                         </div>
                         <br>
                         <div class="row">
@@ -326,7 +349,7 @@
 
                 </div>
             </div>
-            <!-- Container-fluid Ends-->
+            <!-- Container-fluid* Ends-->
         </div>
     @endforeach
     <script>

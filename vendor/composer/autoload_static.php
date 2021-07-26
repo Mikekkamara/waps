@@ -674,6 +674,7 @@ class ComposerStaticInit8c56f0be5550987681b46d591d28d8b0
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\Vehicle' => __DIR__ . '/../..' . '/app/Models/Vehicle.php',
         'App\\Models\\VehiclePhoto' => __DIR__ . '/../..' . '/app/Models/VehiclePhoto.php',
+        'App\\Models\\campaignPhoto' => __DIR__ . '/../..' . '/app/Models/campaignPhoto.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
