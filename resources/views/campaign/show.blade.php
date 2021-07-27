@@ -180,22 +180,25 @@
                         </div>
                         <br>
                         <div class="row">
-                            @if ($photos == null)
+                            
+                            @unless (  count($photos) )
                                 <p class="text-center lead">No photos yet</p>
-                            @else
+                            @endunless
+
+                            @unless ( !count($photos))
                                 @foreach ($photos as $photo)
-                                    <div class="col-md-4">
-                                        <img src="{{ url('../storage/'). '/'.$campaign->id. '/' . $photo->image_name }}" 
-                                            alt=""
-                                            class="d-block w-100">
-                                    </div>
+                                <div class="col-md-4">
+                                    <img src="{{ url('../storage/'). '/'.$campaign->id. '/' . $photo->image_name }}" 
+                                        alt=""
+                                        class="d-block w-100">
+                                </div>
                                 @endforeach
-                                <br>
+
                                 <div class="row mt-4">
 
                                     {{ $photos->links() }}
                                 </div>
-                            @endif
+                            @endunless
 
 
                             {{-- @foreach ($campaignPhotos as $photo )
