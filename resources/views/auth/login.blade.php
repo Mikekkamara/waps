@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+        content=" ">
     <meta name="keywords"
-        content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
+        content="">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
@@ -22,7 +22,7 @@
     <!-- ico-font-->
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/icofont.css">
     <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify.css">
+    {{-- <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify.css"> --}}
     <!-- Flag icon-->
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/flag-icon.css">
     <!-- Feather icon-->
@@ -46,11 +46,11 @@
                 <div class="login-card">
                     <div>
                         <div>
-{{--
-                            <a class="logo" href="index-2.html"><img class="img-fluid for-light"
+
+                            {{-- <a class="logo" href="index-2.html"><img class="img-fluid for-light"
                                     src="/assets/images/logo/login.jpeg" alt="looginpage"><img class="img-fluid for-dark"
-                                    src="/assets/images/logo/logo_dark.png" alt="looginpage"></a> --}}
-                                </div>
+                                    src="/assets/images/logo/logo_dark.png" alt="looginpage"></a>
+                                </div> --}}
                                 <h3>WAPS</h3>
                         <div class="login-main">
                             <form method="POST" class="theme-form" action="{{ route('login') }}">
@@ -89,7 +89,7 @@
                                     </div><a class="link" href="{{route('password.request')}}">Forgot password?</a>
                                     <button class="btn btn-primary btn-block" type="submit">Sign in</button>
                                 </div>
-                                <h6 class="text-muted mt-4 or">Or Sign in with</h6>
+                                {{-- <h6 class="text-muted mt-4 or">Or Sign in with</h6> --}}
 
                                 <p class="mt-4 mb-0">Don't have account?<a class="ms-2" href="{{route('register')}}">Create
                                         Account</a></p>

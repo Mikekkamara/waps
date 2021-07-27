@@ -272,4 +272,19 @@ class CampaignController extends Controller
         // $folder = Storage::allFiles($campaign_id);
         // dd($folder);
     }
+
+    /*      When the end date of a campaign is due, the campaign is declared over 
+    *       and the campaign should be moved to archives?
+    *       should there be a column in the table campaigns that's set to 1 when a 
+    *       campaign is archieved or should the whole data row with the campaign be 
+    *       removed and placed in a new table called archivessss. What happens to the photos of the said campaign?
+    *
+    *       maybe a fx to check if a campaign's end date is due,
+    */
+
+    public function archieveCampaign(){
+
+    }
+
+
 }
