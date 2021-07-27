@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Date;
 use App\Models\campaignPhoto;
 use App\Models\Campaign;
 use App\Models\CampaignDriver;
@@ -123,6 +124,7 @@ class CampaignController extends Controller
             $campaignPhotos = File::allFiles('../storage/app/public/' . $campaign_id);
 
         */
+        
         $photos = campaignPhoto::where('campaign_id', $campaign_id)->paginate(3);
         // dd($photos);
         
@@ -282,8 +284,18 @@ class CampaignController extends Controller
     *       maybe a fx to check if a campaign's end date is due,
     */
 
-    public function archieveCampaign(){
-
+    public function archieveCampaign($campaign_id){
+            // All the campaigns or 1 single campaign?
+        // A single campaign
+        $campaign = Campaign::where('id',$campaign_id)->value('endDate');
+        // Creating a new date instance from the date returned from the db
+        $date = date_create($campaign)->format('d/m/y');
+        if ( $date < date('d/m/y')){
+            dd('This is expired');
+        } else{
+            dd('still on');
+        }
+        // dd($date);
     }
 
 
