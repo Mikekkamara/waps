@@ -284,7 +284,7 @@ class CampaignController extends Controller
     *       maybe a fx to check if a campaign's end date is due,
     */
 
-    public function archieveCampaign($campaign_id){
+    public function archiveCampaign($campaign_id){
             // All the campaigns or 1 single campaign?
         // A single campaign
         $campaign = Campaign::where('id',$campaign_id)->value('endDate');
