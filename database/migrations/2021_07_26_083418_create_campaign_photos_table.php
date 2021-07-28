@@ -14,7 +14,7 @@ class CreateCampaignPhotosTable extends Migration
     public function up()
     {
         Schema::create('campaign_photos', function (Blueprint $table) {
-            $table->id()->primary();
+            $table->id('id');
             $table->uuid('campaign_id');
             $table->string('image_name');
             $table->foreign('campaign_id')

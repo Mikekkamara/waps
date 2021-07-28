@@ -54,7 +54,7 @@ class User extends Authenticatable
     public function customers(){
         return $this->hasMany(Customer::class);
     }
-    public function driverModels(){
+    public function drivers(){
         return $this->hasMany(Driver::class);
     }
 
