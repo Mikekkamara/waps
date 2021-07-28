@@ -145,7 +145,7 @@ class CampaignController extends Controller
         $driver_ids = $request->driver_id;
         // existing driver
         $driver_user_ids = $request->driver_user_id;
-// both new and existing drivers
+        // both new and existing drivers
         if ($driver_user_ids != null && $driver_ids != null) {
             $current_campaign_drivers_ids = [];
             foreach ($driver_user_ids as $driver_user_id) {
