@@ -31,7 +31,7 @@ class UserAuthController extends Controller
     {
 
         // check if email already registered
-        dd($request);
+
         $user = User::where('phone', $request->phone)->first();
         if (!is_null($user)) {
             return response([

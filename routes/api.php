@@ -31,6 +31,8 @@ Route::prefix('v1')->group(function () {
         Route::post('/location', [TravelHistoryController::class, 'getLongitudeLatitude']);
 
 
+
+
         //............................Distance Calculation.................................//
 
         Route::get('/getCampaignDistanceCovered/{campaign_id}', [DistanceController::class, 'getCampaignDistanceCovered'])->name('getCampaignDistanceCovered');

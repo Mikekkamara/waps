@@ -57,7 +57,7 @@
                             data-feather="maximize"></i></a></li>
                 <li class="profile-nav onhover-dropdown p-0 me-0">
                     <div class="media profile-media ">
-                        <img class="b-r-10" 
+                        <img class="b-r-10"
                         src="{{ asset('assets/images/user/user.png') }}"
                             alt="">
                         <div class="media-body  my-auto">
