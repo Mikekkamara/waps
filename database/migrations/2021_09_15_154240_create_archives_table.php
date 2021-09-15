@@ -14,7 +14,7 @@ class CreateArchivesTable extends Migration
     public function up()
     {
         Schema::create('archives', function (Blueprint $table) {
-            $table->id();
+            $table->mediumText('Campaign Name');
             $table->timestamps();
         });
     }

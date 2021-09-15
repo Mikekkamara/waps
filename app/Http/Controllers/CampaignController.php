@@ -8,6 +8,7 @@ use App\Models\Campaign;
 use App\Models\CampaignDriver;
 use App\Models\CampaignVehicle;
 use App\Models\Customer;
+use App\Http\Controllers\ArchiveController;
 use App\Models\Driver;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
@@ -19,8 +20,9 @@ class CampaignController extends Controller
 
     public function index(Request $request)
     {
+        $archive = new ArchiveController();
+        $archive->update();
         $campaigns = Campaign::with('campaignVehicles', 'customer')->get();
-
         $allCampaignCount = $this->allCampaignsCount();
         $activeCampaignsCount = $this->activeCampaignsCount();
         $finishedCampaignsCount = $this->finishedCampaignsCount();

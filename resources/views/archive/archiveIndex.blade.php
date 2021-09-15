@@ -47,17 +47,9 @@
                         <tbody>
 
                             <tr>
-                                <td>TestCampaign</td>
-                                <td>01/10/2021</td>
-                                <td>01/10/2021</td>
-                                <td>Success</td>
+                                <td></td>
                             </tr>
-                            <tr>
-                                <td>TestCampaign</td>
-                                <td>01/10/2021</td>
-                                <td>01/10/2021</td>
-                                <td>Success</td>
-                            </tr>
+
                         </tbody>
                         <tfoot>
                             <tr>

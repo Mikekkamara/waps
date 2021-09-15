@@ -126,7 +126,7 @@
                                             <th>Customer</th>
                                             <th>Start Date</th>
                                             <th>End Date</th>
-                                            <th>Status</th>
+                                            {{-- <th>Status</th> --}}
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -134,25 +134,23 @@
                                         @foreach ($campaigns as $campaign)
                                             <tr>
 
-                                                <td>{{ $campaign->name }}
-                                                </td>
+                                                <td>{{ $campaign->name }}</td>
                                                 <td>{{ $campaign->goal }} </td>
+
                                                 @php
                                                     $customer_id = $campaign->customer->id;
-
-
-
                                                     $user_id = \App\Models\Customer::where('id', $customer_id)->pluck('user_id')->first();
                                                     $users = \App\Models\User::where('id', $user_id)->get();
-
                                                 @endphp
+
                                                 @foreach ($users as $user)
 
                                                     <td>{{ $user->first_name }} &nbsp; {{ $user->surname }} </td>
                                                 @endforeach
+
                                                 <td>{{ $campaign->startDate }}</td>
                                                 <td>{{ $campaign->endDate }}</td>
-                                                <td>{{ $campaign->status }}</td>
+                                                {{-- <td>{{ $campaign->status }}</td> --}}
                                                 <td><a href="{{ route('campaign.show', $campaign->id) }}"><i
                                                             data-feather="eye">View</i></a> &nbsp; &nbsp;<a href="{{ route('campaign.edit', $campaign->id) }}"><i data-feather="edit"></i></i></a></td>
                                             </tr>
