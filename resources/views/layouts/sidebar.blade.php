@@ -28,24 +28,30 @@
                     </li> --}}
 
                     <li class="sidebar-list">
-                      <a class="sidebar-link sidebar-title" href="#"><i
-                                data-feather="box"></i><span>Campaigns </span></a>
+                      <a class="sidebar-link sidebar-title" href="#">
+                        <i class="fas fa-bullhorn mx-2"></i><span>Campaigns </span></a>
                         <ul class="sidebar-submenu">
                             <li><a href="{{route('campaign.create')}}">Create new</a></li>
                             <li><a href="{{route('campaign.index')}}">Campaign List</a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{route('driver.index')}}"><i
-                                data-feather="git-pull-request"> </i><span>Drivers</span></a></li>
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav" href="{{route('driver.index')}}">
+                        <i class="fas fa-truck mx-2"></i><span>Drivers</span></a>
+                    </li>
 
-                                <li class="sidebar-list">
-                                  <a class="sidebar-link sidebar-title" href="#"><i
-                                            data-feather="box"></i><span>Customers </span></a>
-                                    <ul class="sidebar-submenu">
-                                        <li><a href="{{route('customer.create')}}">Add Customers</a></li>
-                                        <li><a href="{{route('customer.index')}}">Customer List </a></li>
-                                    </ul>
-                                </li>
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title" href="#">
+                        <i class="fas fa-user-tie mx-2"></i><span>Customers </span></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="{{route('customer.create')}}">Add Customers</a></li>
+                            <li><a href="{{route('customer.index')}}">Customer List </a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title link-nav" href="{{ route('archive') }}">
+                        <i class="fas fa-archive mx-2"></i><span>Archive</span></a>
+                    </li>
 
                     {{-- <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#"><i
                                 data-feather="users"></i><span>Users</span></a>
