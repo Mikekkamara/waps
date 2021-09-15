@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArchiveController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CampaignController;
@@ -76,4 +77,6 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::get('/getMonthlyReturnOrdersCount', 'ChartController@getMonthlyReturnOrdersCount')->name('getMonthlyReturnOrdersCount');
 	Route::get('/getMonthlyOrdersData', 'ChartController@getMonthlyOrdersData')->name('getMonthlyOrdersData');
 
+    //............................Archive.................................//
+    Route::get('/archive', [ArchiveController::class,'index'])->name('archive');
 });
