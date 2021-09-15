@@ -124,6 +124,8 @@
                                             <th>Campaign Name</th>
                                             <th>Goal</th>
                                             <th>Customer</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -148,6 +150,8 @@
 
                                                     <td>{{ $user->first_name }} &nbsp; {{ $user->surname }} </td>
                                                 @endforeach
+                                                <td>{{ $campaign->startDate }}</td>
+                                                <td>{{ $campaign->endDate }}</td>
                                                 <td>{{ $campaign->status }}</td>
                                                 <td><a href="{{ route('campaign.show', $campaign->id) }}"><i
                                                             data-feather="eye">View</i></a> &nbsp; &nbsp;<a href="{{ route('campaign.edit', $campaign->id) }}"><i data-feather="edit"></i></i></a></td>

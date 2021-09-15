@@ -34,19 +34,39 @@
             <div class="card-body">
                 <div class="table-responsive">
 
-                    <table class="display dataTable">
-                        <tr>
-                            <th>Campaign</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>TestCampaign</td>
-                            <td>01/10/2021</td>
-                            <td>01/10/2021</td>
-                            <td>Success</td>
-                        </tr>
+                    <table class="display dataTable ">
+                        <thead>
+                            <tr>
+                                <th>Campaign</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>TestCampaign</td>
+                                <td>01/10/2021</td>
+                                <td>01/10/2021</td>
+                                <td>Success</td>
+                            </tr>
+                            <tr>
+                                <td>TestCampaign</td>
+                                <td>01/10/2021</td>
+                                <td>01/10/2021</td>
+                                <td>Success</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Campaign</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
