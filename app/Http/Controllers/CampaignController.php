@@ -23,6 +23,7 @@ class CampaignController extends Controller
         $archive = new ArchiveController();
         $archive->update();
         $campaigns = Campaign::with('campaignVehicles', 'customer')->get();
+        // dd($campaigns);
         $allCampaignCount = $this->allCampaignsCount();
         $activeCampaignsCount = $this->activeCampaignsCount();
         $finishedCampaignsCount = $this->finishedCampaignsCount();

@@ -99,7 +99,7 @@
                                     <h4>$95,000<span class="new-box">New</span></h4><span>Product Order Value</span>
                                 </div>
                                 <div class="knob-block text-center">
-                                    <input class="knob1" data-width="50" data-height="70" data-thickness=".3"
+                                    <input class="knob1 form-control" data-width="50" data-height="70" data-thickness=".3"
                                         data-fgcolor="#7366ff" data-linecap="round" data-angleoffset="0" value="60">
                                 </div>
                             </div>

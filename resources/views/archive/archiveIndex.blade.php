@@ -45,13 +45,19 @@
 
                         </thead>
                         <tbody>
-
-                            <tr>
-                                <td></td>
-                            </tr>
-
+                            @foreach ($campaigns as $campaign)
+                                <tr>
+                                    <td>{{ $campaign->name }}</td>
+                                    <td>{{ $campaign->startDate }}</td>
+                                    <td>{{ $campaign->endDate }}</td>
+                                    <td>{{ $campaign->status }}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                         <tfoot>
+                            <caption>
+                                {{ $campaigns->links() }}
+                            </caption>
                             <tr>
                                 <th>Campaign</th>
                                 <th>Start Date</th>
