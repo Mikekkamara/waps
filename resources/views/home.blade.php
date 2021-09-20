@@ -421,7 +421,7 @@
                   <div class="media-body d-flex">
                     <div class="img-profile"> <img class="img-fluid" src="/assets/images/user.jpg" alt="Profile"></div>
                     <div class="main-chat">
-                      <div class="sub-message message-main mt-0"><span>It's argenty</span></div>
+                      <div class="sub-message message-main mt-0"><span>It's argent</span></div>
                     </div>
                   </div>
                   <p class="f-w-400">7:28 PM</p>
