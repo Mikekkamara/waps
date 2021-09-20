@@ -52,7 +52,7 @@
       </div>
       <div class="position-absolute row row-cols-1 g-4 d-sm-none">
         <div class="col">
-          <div class="card bg-transparent border-0">
+          <div class="card bg-transparent border-0 m-4">
             <img src="{{ asset('assets/images/landing/undraw_good_team_m7uu.svg') }}" class="card-img-top" alt="">
             <div class="card-body display-6">
               Our committed team work together to ensure only the best of service for you!
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card bg-transparent border-0">
+          <div class="card bg-transparent border-0 m-4">
             <img src="{{ asset('assets/images/landing/undraw_navigator_a479.svg') }}" class="card-img-top" alt="">
             <div class="card-body display-6">
               Keep track of our drivers as they carry out your campaigns.
@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card bg-transparent border-0">
+          <div class="card bg-transparent border-0 m-4">
             <img src="{{ asset('assets/images/landing/undraw_personal_file_222m.svg') }}" class="card-img-top" alt="">
             <div class="card-body display-6">
               A summary of your campaigns for your convenience!
