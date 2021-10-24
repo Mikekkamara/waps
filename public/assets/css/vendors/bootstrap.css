@@ -4159,6 +4159,8 @@ progress {
 
 .border-primary {
   border-color: #0d6efd !important; }
+.border-theme {
+  border-color: var(--theme) !important; }
 
 .border-secondary {
   border-color: #6c757d !important; }
@@ -4215,7 +4217,7 @@ progress {
   width: 100% !important; }
 
 .w-auto {
-  width: auto !important; }
+  width: auto !important;}
 .w-fit-content{
   width: fit-content !important; }
 
@@ -4263,6 +4265,7 @@ progress {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
+      background: url;
           flex-direction: row !important; }
 
 .flex-column {
@@ -7159,6 +7162,7 @@ progress {
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
+  --theme:#ed8b02;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;

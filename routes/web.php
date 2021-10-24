@@ -22,7 +22,7 @@ use App\Http\Controllers\ChartController;
 /* Route::get('/', function () {
     return redirect()->route('login');
 }); */
- Route::view('/', 'welcome');
+Route::view('/', 'welcome');
 
 Auth::routes();
 
