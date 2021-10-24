@@ -4966,6 +4966,13 @@ progress {
 
 .pe-none {
   pointer-events: none !important; }
+.container-home{
+  background: url('../images/favpng_car-brand-advertising-compact-van-design.png') center;
+  /* color: rgb(206, 197, 197); */
+  background-size: cover;
+}
+
+
 
 .pe-auto {
   pointer-events: auto !important; }

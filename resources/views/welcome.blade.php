@@ -19,9 +19,9 @@
       </ul>
     </nav> --}}
     
-    <div class="row-cols-1 p-2" style="background: url('../public/assets/images/landing/favpng_car-wrap-advertising-vehicle-fiat.png')">
-      
-      <div class="col text-center py-4">
+    <div class="row-cols-1 p-2 bg-opacity-25 ">
+      <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
+      <div class="col text-center ">
         <p class="display-6">
             WAPS is an out of home, transit advertisement company that uses car wrap advertising applied on 
             everyday driver's cars and the power of technology to provide valuable analytics to help the advitiser
@@ -30,14 +30,14 @@
         <a href="" class="btn btn-primary w-50">Login</a>
       </div>
     </div>
-    <div class="px-2">
-      <div class="card text-center bg-transparent border-theme">
-        <div class="card-header bg-transparent border-dark lead">
+    <div class="p-2">
+      <div class="card text-center bg-transparent border-theme w-75 h-auto m-auto">
+        <div class="card-header bg-transparent border-dark display-6">
           Make your Campaign even bigger!
         </div>
         <div class="card-body">
           <img src="{{ asset('assets/images/landing/undraw_Happy_birthday_re_c16u.svg') }}" class="card-img-top" alt="">
-          <p class="card-text display-6">
+          <p class="card-text lead">
             Swarm is a new feature introduced by WAPS that enables advertisers with an
             already existing campaign to create an even bigger buzz! Swarm allows you to take over 
             specific road segments at specific times. Through our web platform an advitiser will be 
@@ -46,10 +46,10 @@
         </div>
       </div>
     </div>
-    <div class="card-header w-75 m-auto text-center display-5 mt-3 border-theme fw-light">
+    <div class="card-header w-fit-content m-auto text-center border-3 bg-transparent display-5 mt-3 border-theme fw-light">
       How it works
     </div>
-    <div class="container d-flex flex-column p-3">
+    <div class="container d-flex flex-column p-3 border my-2 rounded-1">
 
       <div class="card text-center m-1 bg-transparent border-dark">
         <div class="card-body">
@@ -88,7 +88,76 @@
       </div>
 
     </div>
+    <div class="card-header w-75 m-auto text-center display-5 my-3 border-theme fw-light">
+      Drivers
+    </div>
+
+    <div class="row-cols-1 p-2 ">
+      <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
+      <div class="col text-center py-4">
+        <p class="display-6">
+          The drivers in WAPS network are safe, high-mileage, everday drivers from the local community who want to 
+          earn residual income from driving around with a brand on their car. More specifically, our WAPS drivers are a myriad of esteemed
+          community members; an eclectic mix of ride share drivers like <strong>Uber</strong> and <strong>Bolt</strong>
+          all whom have consistent driving patterns and keep a 2010 model car or newer, in excellent condition.
+        </p>
+      </div>
+    </div>
+    <div class="card-header w-75 m-auto text-center display-5 my-3 border-theme fw-light">
+      Wrap Design
+    </div>
+    <div class="row-cols-1 p-2">
+      <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
+      <div class="col text-center py-4">
+        <p class="display-6">
+          Designing for cars is a very niche field within the graphic design comunity. Not only do designs need to be thought of in 
+          a 3-dimensional space, but the inticacies and difficulties of designing on a non-flat surface which include the likes of car door handles,
+          side panelling, windows, and bumper contours, creates quite a complex design challenge. Unless our brand partner has designers or staff with experience
+          on designing car wraps, it is highky recommended that our brand partner work with our in-house creative team to bring their car wrap vision to life at
+          <strong>no extra fee</strong>!
+        </p>
+      </div>
+    </div>
+    <div class="card-header w-75 m-auto text-center display-5 mt-3 border-theme fw-light">
+      Our Dashboard
+    </div>
+    <div class="row-cols-1 p-2">
+      <img src="{{ asset('assets/css/images/Screenshot 2021-10-23 115215.png') }}" alt="" class="card-img">
+      <div class="col text-center py-4">
+        <p class="display-6">
+          WAPS online dashboard takes online advertising to the next level. It allows the advitiser to measure the impact
+          of the high-recall out of home WAPS vehicles produced with our OHH tracking technology. By loggin into the campaign
+          dashboard, the advertiser will be able to access metrics in;
+          <ul class="w-fit-content m-auto lead">
+            <li class="">Mileage</li>
+            <li>Heatmaps</li>
+          </ul>
+        </p>
+      </div>
+    </div>
     
   </div>
+  <footer class="row-cols-3 bg-dark text-light d-flex flex-row">
+    <div class="col-4">
+      <p class="display-7">Social</p>
+      <ul>
+        <li>FaceBook</li>
+        <li>Whatsapp</li>
+        <li>Instagram</li>
+        <li>messenger</li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <ul>
+        <li>About Us</li>
+        <li>Q & A</li>
+        <li>Privacy</li>
+        <li>Terms and Conditions</li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <p class="display-6">WAPS | All rights reserved</p>
+    </div>
+  </footer>
 </body>
 </html>
