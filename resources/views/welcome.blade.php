@@ -28,7 +28,7 @@
             everyday driver's cars and the power of technology to provide valuable analytics to help the advitiser
             get better outcomes from brand campaigns.
         </p>
-        <a href="" class="btn btn-primary w-100">Login</a>
+        <a href="{{ route('login') }}" class="btn btn-primary w-100">Login</a>
       </div>
     </div>
               {{-- Lg --}}
@@ -42,7 +42,7 @@
                       everyday driver's cars and the power of technology to provide valuable analytics to help the advitiser
                       get better outcomes from brand campaigns.
                   </p>
-                  <a href="" class="btn btn-primary w-100">Login</a>
+                  <a href="{{ route('login') }}" class="btn btn-primary w-100">Login</a>
                 </div>
               {{-- Lg --}}
               </div>
