@@ -4792,6 +4792,8 @@ progress {
 
 .fs-6 {
   font-size: 1rem !important; }
+.fs-7 {
+  font-size: 0.5rem !important; }
 
 .fst-italic {
   font-style: italic !important; }
@@ -4852,6 +4854,8 @@ progress {
 
 .text-light {
   color: #f8f9fa !important; }
+.text-theme {
+  color: var(--theme) !important; }
 
 .text-dark {
   color: #212529 !important; }
@@ -4971,7 +4975,11 @@ progress {
   /* color: rgb(206, 197, 197); */
   background-size: cover;
 }
-
+.home-overlay{
+  background: linear-gradient(rgba(228, 226, 226, 0.864),rgba(228, 226, 226, 0.864));
+  /* background: linear-gradient(rgba(0, 0, 0, 0.508),rgba(0, 0, 0, 0.563)); */
+  /* color: white; */
+}
 
 
 .pe-auto {
