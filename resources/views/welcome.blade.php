@@ -10,6 +10,7 @@
 </head>
 <body>
   <img src="{{ asset('assets/images/login/login_bg.jpg') }}" class="w-100 h-100 position-fixed" alt="Background" style="z-index: -1">
+  {{-- <img src="{{ asset('assets/css/images/favpng_car-door-minivan-wrap-advertising-city-car.png') }}" class="w-100 h-100 position-fixed" alt="Background" style="z-index: -1"> --}}
   <div class="">
     <div class="row-cols-1 p-2 bg-opacity-25 position-relative d-xl-none">
       <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
@@ -19,7 +20,7 @@
             everyday driver's cars and the power of technology to provide valuable analytics to help the advitiser
             get better outcomes from brand campaigns.
         </p>
-        <a href="" class="btn btn-primary w-50">Login</a>
+        <a href="{{ route('login') }}" class="btn btn-primary w-50">Login</a>
       </div>
       <div class="col text-center d-none d-md-block card-img-overlay m-auto w-50  h-fit-content home-overlay rounded-3">
         <p class="display-7">
@@ -60,7 +61,7 @@
           </p>
         </div>
       </div>
-      <div class="card text-center bg-transparent border-theme h-auto m-auto border-4 d-none d-md-block">
+      <div class="card text-center bg-transparent border-theme h-auto m-auto border-4 d-none d-md-block mx-xl-5">
         <div class="card-header bg-transparent border-dark display-6">
           <i class="fas fa-bullhorn me-3"></i>Make your Campaign even bigger! 
         </div>
@@ -78,9 +79,10 @@
     <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
       How it works
     </div>
-    <div class="container-fluid d-flex flex-column  p-3 my-2 rounded-1 align-items-center flex-lg-row h-fit-content" style="">
+    {{-- <div class="container-fluid d-flex flex-column  p-3 my-2 rounded-1 align-items-center flex-lg-row h-fit-content w-75" > --}}
+    <div class="container-fluid d-flex flex-column flex-xl-row w-75 m-auto" >
 
-      <div class="card text-center m-1 bg-transparent border-dark " style="flex: 1">
+      <div class="card text-center m-1 bg-transparent border-dark">
         <div class="card-body">
           <p class="card-img-top">1</p>
           <p class="card-title display-6"><i class="fas fa-bullseye me-3 text-theme"></i>Goals</p>
@@ -92,10 +94,10 @@
         </div>
       </div>
 
-      <div class="card text-center m-1 bg-transparent border-dark " style="flex: 1">
+      <div class="card text-center m-1 bg-transparent border-dark">
         <div class="card-body">
           <p class="card-img-top">2</p>
-          <p class="card-title display-6"><i class="fas fa-list-ol me-3 text-theme"></i>Recruitment</p>
+          <p class="card-title display-6"><i class="fas fa-list-ol me-3 text-theme"></i>Enlist</p>
           <p class="card-text lead fs-6">
             Once confirmed, we recruit, screen, and admit drivers from our databse into our brand partner's campaign.
             Only drivers who drive in the region of interest and who hit all four of our needed driver quality check points are recruited.
@@ -103,7 +105,7 @@
         </div>
       </div>
 
-      <div class="card text-center m-1 bg-transparent border-dark " style="flex: 1">
+      <div class="card text-center m-1 bg-transparent border-dark">
         <div class="card-body">
           <p class="card-img-top">3</p>
           <p class="card-title display-6"><i class="fas fa-car me-3 text-theme" ></i>Wrapping</p>
@@ -117,52 +119,107 @@
       </div>
 
     </div>
-    <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
-      Drivers
+    <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 my-4 ">
+      Why Us?
     </div>
+    <div class="d-md-none">
 
-    <div class="row-cols-1 p-2 ">
-      <img src="{{ asset('assets/css/images/favpng_car-door-minivan-wrap-advertising-city-car.png') }}" alt="" class="card-img">
-      <div class="col text-center py-4">
-        <p class="display-6">
-          The drivers in WAPS network are safe, high-mileage, everday drivers from the local community who want to 
-          earn residual income from driving around with a brand on their car. More specifically, our WAPS drivers are a myriad of esteemed
-          community members; an eclectic mix of ride share drivers like <strong>Uber</strong> and <strong>Bolt</strong>
-          all whom have consistent driving patterns and keep a 2010 model car or newer, in excellent condition.
-        </p>
+      <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
+        <span class="text-theme">1. </span>Drivers
+      </div>
+  
+      <div class="row-cols-1 p-2 ">
+        <img src="{{ asset('assets/css/images/favpng_car-door-minivan-wrap-advertising-city-car.png') }}" alt="" class="card-img">
+        <div class="col text-center py-4">
+          <p class="display-6">
+            The drivers in WAPS network are safe, high-mileage, everday drivers from the local community who want to 
+            earn residual income from driving around with a brand on their car. More specifically, our WAPS drivers are a myriad of esteemed
+            community members; an eclectic mix of ride share drivers like <strong>Uber</strong> and <strong>Bolt</strong>
+            all whom have consistent driving patterns and keep a 2010 model car or newer, in excellent condition.
+          </p>
+        </div>
+      </div>
+      <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
+        <span class="text-theme">2. </span>Wrap Design
+      </div>
+      <div class="row-cols-1 p-2">
+        <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
+        <div class="col text-center py-4">
+          <p class="display-6">
+            Designing for cars is a very niche field within the graphic design comunity. Not only do designs need to be thought of in 
+            a 3-dimensional space, but the inticacies and difficulties of designing on a non-flat surface which include the likes of car door handles,
+            side panelling, windows, and bumper contours, creates quite a complex design challenge. Unless our brand partner has designers or staff with experience
+            on designing car wraps, it is highky recommended that our brand partner work with our in-house creative team to bring their car wrap vision to life at
+            <strong>no extra fee</strong>!
+          </p>
+        </div>
+      </div>
+      <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
+        <span class="text-theme">3. </span>Our Dashboard
+      </div>
+      <div class="row-cols-1 p-2">
+        <img src="{{ asset('assets/css/images/Screenshot 2021-10-23 115215.png') }}" alt="" class="card-img">
+        <div class="col text-center py-4">
+          <p class="display-6">
+            WAPS online dashboard takes online advertising to the next level. It allows the advitiser to measure the impact
+            of the high-recall out of home WAPS vehicles produced with our OHH tracking technology. By loggin into the campaign
+            dashboard, the advertiser will be able to access metrics in;
+            <ul class="w-fit-content m-auto lead">
+              <li class=""><i class="fas fa-map-marker-alt me-3"></i>Mileage</li>
+              <li><i class="fas fa-fire me-3"></i>Heatmaps</li>
+            </ul>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
-      Wrap Design
-    </div>
-    <div class="row-cols-1 p-2">
-      <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
-      <div class="col text-center py-4">
-        <p class="display-6">
-          Designing for cars is a very niche field within the graphic design comunity. Not only do designs need to be thought of in 
-          a 3-dimensional space, but the inticacies and difficulties of designing on a non-flat surface which include the likes of car door handles,
-          side panelling, windows, and bumper contours, creates quite a complex design challenge. Unless our brand partner has designers or staff with experience
-          on designing car wraps, it is highky recommended that our brand partner work with our in-house creative team to bring their car wrap vision to life at
-          <strong>no extra fee</strong>!
-        </p>
-      </div>
-    </div>
-    <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
-      Our Dashboard
-    </div>
-    <div class="row-cols-1 p-2">
-      <img src="{{ asset('assets/css/images/Screenshot 2021-10-23 115215.png') }}" alt="" class="card-img">
-      <div class="col text-center py-4">
-        <p class="display-6">
-          WAPS online dashboard takes online advertising to the next level. It allows the advitiser to measure the impact
-          of the high-recall out of home WAPS vehicles produced with our OHH tracking technology. By loggin into the campaign
-          dashboard, the advertiser will be able to access metrics in;
-          <ul class="w-fit-content m-auto lead">
-            <li class=""><i class="fas fa-map-marker-alt me-3"></i>Mileage</li>
-            <li><i class="fas fa-fire me-3"></i>Heatmaps</li>
-          </ul>
-        </p>
-      </div>
+    {{-- xl --}}
+    <div class="container-fluid d-none d-md-flex w-75 m-auto flex-column">
+        <div class="card text-center m-1 bg-transparent h-fit-content w-75 m-auto">
+          <div class="card-header display-6 bg-transparent">
+              <span class="text-theme">1. </span> Drivers
+          </div>
+          <div class="card-body">
+            <img src="{{ asset('assets/css/images/favpng_car-door-minivan-wrap-advertising-city-car.png') }}" alt="" class="card-img-top w-75">
+            <p class="card-text lead">
+              The drivers in WAPS network are safe, high-mileage, everday drivers from the local community who want to 
+              earn residual income from driving around with a brand on their car. More specifically, our WAPS drivers are a myriad of esteemed
+              community members; an eclectic mix of ride share drivers like <strong>Uber</strong> and <strong>Bolt</strong>
+              all whom have consistent driving patterns and keep a 2010 model car or newer, in excellent condition.
+            </p>
+          </div>
+        </div>
+        <div class="card text-center my-2 bg-transparent h-fit-content w-75 mx-auto ">
+          <div class="card-header display-6 bg-transparent">
+            <span class="text-theme">2. </span> Wrap Design
+          </div>
+          <div class="card-body">
+            <img src="{{ asset('assets/css/images/favpng_car-brand-advertising-compact-van-design.png') }}" alt="" class="card-img w-50">
+            <p class="card-text lead">
+              Designing for cars is a very niche field within the graphic design comunity. Not only do designs need to be thought of in 
+              a 3-dimensional space, but the inticacies and difficulties of designing on a non-flat surface which include the likes of car door handles,
+              side panelling, windows, and bumper contours, creates quite a complex design challenge. Unless our brand partner has designers or staff with experience
+              on designing car wraps, it is highky recommended that our brand partner work with our in-house creative team to bring their car wrap vision to life at
+              <strong>no extra fee</strong>!
+            </p>
+          </div>
+        </div>
+        <div class="card text-center m-1 bg-transparent h-fit-content w-75 m-auto">
+          <div class="card-header display-6 bg-transparent">
+            <span class="text-theme">3. </span> WAPS Dashboard
+          </div>
+          <div class="card-body">
+            <img src="{{ asset('assets/css/images/Screenshot 2021-10-23 115215.png') }}" alt="" class="card-img ">
+            <p class="card-text lead">
+              WAPS online dashboard takes online advertising to the next level. It allows the advitiser to measure the impact
+              of the high-recall out of home WAPS vehicles produced with our OHH tracking technology. By loggin into the campaign
+              dashboard, the advertiser will be able to access metrics in;
+                <ul class="w-fit-content m-auto lead">
+                  <li class=""><i class="fas fa-map-marker-alt me-3"></i>Mileage</li>
+                  <li><i class="fas fa-fire me-3"></i>Heatmaps</li>
+                </ul>
+            </p>
+          </div>
+        </div>
     </div>
     
   </div>
