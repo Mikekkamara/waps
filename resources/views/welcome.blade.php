@@ -11,16 +11,7 @@
 <body>
   <img src="{{ asset('assets/images/login/login_bg.jpg') }}" class="w-100 h-100 position-fixed" alt="Background" style="z-index: -1">
   <div class="">
-    
-    {{-- <nav class="nav py-1 d-flex justify-content-end">
-      <ul class="nav nav-pills m-1">
-        <li class="nav-item ">
-          <a href="" class="nav-link active ">Login</a>
-        </li>
-      </ul>
-    </nav> --}}
-    
-    <div class="row-cols-1 p-2 bg-opacity-25 position-relative ">
+    <div class="row-cols-1 p-2 bg-opacity-25 position-relative d-xl-none">
       <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
       <div class="col text-center d-md-none">
         <p class="display-6">
@@ -39,6 +30,21 @@
         <a href="" class="btn btn-primary w-100">Login</a>
       </div>
     </div>
+              {{-- Lg --}}
+              <div class="row-cols-1 p-2 bg-opacity-25 position-relative d-none d-xl-block ">
+                <div class="container-fluid w-75 me-0">
+                  <img src="{{ asset('assets/css/images/favpng_car-wrap-advertising-vehicle-fiat.png') }}" alt="" class="card-img">
+                </div>
+                <div class="col text-center card-img-overlay w-25 home-overlay h-fit-content rounded-3 my-auto start-25">
+                  <p class="display-7">
+                      WAPS is an out of home, transit advertisement company that uses car wrap advertising applied on 
+                      everyday driver's cars and the power of technology to provide valuable analytics to help the advitiser
+                      get better outcomes from brand campaigns.
+                  </p>
+                  <a href="" class="btn btn-primary w-100">Login</a>
+                </div>
+              {{-- Lg --}}
+              </div>
     <div class="p-2">
       <div class="card text-center bg-transparent border-theme h-auto m-auto border-4 d-md-none">
         <div class="card-header bg-transparent border-dark display-6">
@@ -72,9 +78,9 @@
     <div class="card-header w-fit-content m-auto fw-bold  border-0 bg-transparent display-5 mt-3">
       How it works
     </div>
-    <div class="container d-flex flex-column  p-3 my-2 rounded-1 align-items-center " style="">
+    <div class="container-fluid d-flex flex-column  p-3 my-2 rounded-1 align-items-center flex-lg-row h-fit-content" style="">
 
-      <div class="card text-center m-1 bg-transparent border-dark w-75 h-100">
+      <div class="card text-center m-1 bg-transparent border-dark " style="flex: 1">
         <div class="card-body">
           <p class="card-img-top">1</p>
           <p class="card-title display-6"><i class="fas fa-bullseye me-3 text-theme"></i>Goals</p>
@@ -86,7 +92,7 @@
         </div>
       </div>
 
-      <div class="card text-center m-1 bg-transparent border-dark w-75">
+      <div class="card text-center m-1 bg-transparent border-dark " style="flex: 1">
         <div class="card-body">
           <p class="card-img-top">2</p>
           <p class="card-title display-6"><i class="fas fa-list-ol me-3 text-theme"></i>Recruitment</p>
@@ -97,10 +103,10 @@
         </div>
       </div>
 
-      <div class="card text-center m-1 bg-transparent border-dark w-75">
+      <div class="card text-center m-1 bg-transparent border-dark " style="flex: 1">
         <div class="card-body">
           <p class="card-img-top">3</p>
-          <p class="card-title display-6"><i class="fas fa-car me-3 text-theme"></i>Wrapping</p>
+          <p class="card-title display-6"><i class="fas fa-car me-3 text-theme" ></i>Wrapping</p>
           <p class="card-text lead fs-6">
             At a confirmed start date, all admited drivers come to our facility and their vehicles are wrapped in our brand 
             partner's advertisement. The car is the returned to the owner, and for the set time frame the car generates powerful impressions
